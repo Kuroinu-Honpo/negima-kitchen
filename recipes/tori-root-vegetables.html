@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="color-scheme" content="light" />
-<link rel="icon" href="data:," />
+<link rel="icon" href="/favicon.ico" sizes="any">
 <title>鶏と根菜の炒り煮レシピカード</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -263,6 +263,14 @@
   footer.card-foot .team{
     font-family:"Yomogi",cursive; font-size:.95rem; color:var(--brown); letter-spacing:.05em;
   }
+  .recipe-nav{
+    margin:0 0 16px;
+  }
+  .recipe-nav a{
+    display:inline-flex; align-items:center; min-height:48px; padding:10px 16px;
+    border:1.5px solid var(--line); border-radius:999px; background:var(--orange-soft);
+    color:var(--brown-dark); font-weight:800; text-decoration:none;
+  }
 
   @media (max-width:680px){
     .cols{ grid-template-columns:1fr; gap:26px; }
@@ -270,6 +278,7 @@
     .stamp-box{ flex-direction:column; text-align:center; padding:20px 16px; }
     .stamp-quote .who{ text-align:center; }
     .stamp{ transform:rotate(-5deg); }
+    .recipe-nav a{ width:100%; justify-content:center; }
   }
 
   @media print{
@@ -279,6 +288,7 @@
     .card{ border:none; box-shadow:none; border-radius:0; padding:10mm; }
     .card::before{ display:none; }
     .timer-btn, .tap-hint{ display:none; }
+    .recipe-nav{ display:none; }
     .steps li{ cursor:default; }
     .steps li.done{ opacity:1; }
     .steps li.done .step-body p{ text-decoration:none; }
@@ -289,8 +299,11 @@
 </style>
 </head>
 <body>
-<div class="wrap"><p style="margin:0 0 12px"><a href="../index.html" style="color:#7c4a21;font-weight:700;text-decoration:none">← TEAMねぎまの台所へ戻る</a></p>
+<div class="wrap">
   <article class="card" aria-label="鶏と根菜の炒り煮のレシピカード">
+    <nav class="recipe-nav" aria-label="レシピ一覧へのナビゲーション">
+      <a href="/">🏠 レシピ一覧へ戻る</a>
+    </nav>
 
     <div class="meta-row">
       <span class="pill pill-date">
@@ -438,6 +451,9 @@
       <span>2026年11月4日 ・ 鶏と根菜の炒り煮（砂糖なし甘辛）</span>
     </footer>
 
+    <nav class="recipe-nav" aria-label="レシピ一覧へのナビゲーション">
+      <a href="/">🏠 レシピ一覧へ戻る</a>
+    </nav>
   </article>
 </div>
 

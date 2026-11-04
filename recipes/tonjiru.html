@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="color-scheme" content="light dark" />
-    <link rel="icon" href="data:," />
+    <link rel="icon" href="/favicon.ico" sizes="any">
     <title>具だくさん豚汁レシピカード</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -336,20 +336,42 @@
         font-size: 14px;
         color: var(--brown);
       }
+      .recipe-nav {
+        margin: 14px 18px;
+      }
+      .recipe-nav a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 48px;
+        padding: 10px 16px;
+        border: 1.5px solid var(--line);
+        border-radius: 999px;
+        background: var(--orange-soft);
+        color: var(--brown-deep);
+        font-weight: 800;
+        text-decoration: none;
+      }
       @media (max-width: 560px) {
         section, .hero, .meta { padding-left: 16px; padding-right: 16px; }
         .timer-display { font-size: 40px; }
+        .recipe-nav { margin-left: 16px; margin-right: 16px; }
+        .recipe-nav a { width: 100%; justify-content: center; }
       }
       @media print {
         body { background: #fff; padding: 0; }
         .card { box-shadow: none; border: none; border-radius: 0; max-width: none; }
         .step-timer .st-btns, .steps-hint { display: none; }
         .step { cursor: default; }
+        .recipe-nav { display: none; }
       }
     </style>
   </head>
   <body>
     <article class="card">
+      <nav class="recipe-nav" aria-label="レシピ一覧へのナビゲーション">
+        <a href="/">🏠 レシピ一覧へ戻る</a>
+      </nav>
+
       <!-- ヘッダー -->
       <header class="head">
         <p class="series">TEAMねぎまの台所　レシピカード No.2</p>
@@ -459,6 +481,10 @@
         <span class="team">TEAMねぎまの台所</span><br />
         レシピカード No.2「具だくさん豚汁（濃い甘・大鍋）」／ 2026年11月1日
       </footer>
+
+      <nav class="recipe-nav" aria-label="レシピ一覧へのナビゲーション">
+        <a href="/">🏠 レシピ一覧へ戻る</a>
+      </nav>
     </article>
 
     <script>
